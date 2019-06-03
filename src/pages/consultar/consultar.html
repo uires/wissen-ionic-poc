@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Notas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card>
+    <ion-list>
+        <ion-list-header>Avaliações</ion-list-header>
+        <ion-item>
+            <ion-icon name="md-bookmark" item-start></ion-icon>    
+             Primeira avaliação :  {{ notaSelecionada.primeiraNota }}
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-bookmark" item-start></ion-icon>    
+             Segunda avaliação :  {{ notaSelecionada.segundaNota }}
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-bookmark" item-start></ion-icon>    
+             Terceira avaliação :  {{ notaSelecionada.terceiraNota }}
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-bookmark" item-start></ion-icon>    
+             Quarta avaliação :  {{ notaSelecionada.quartaNota }}
+         </ion-item>
+        <ion-item>
+            <ion-icon name="ios-calendar" item-start></ion-icon>    
+             Média :  {{ notaSelecionada.media }}
+        </ion-item>
+      </ion-list>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>Disciplina</ion-card-header>
+    <ion-list padding>
+      <ion-item>{{ notaSelecionada.disciplina.nome }}</ion-item>
+      <ion-item>Docente: {{ notaSelecionada.docente.nomeCompleto }}<ion-icon name="ios-person" item-right></ion-icon></ion-item>
+    </ion-list>
+
+
+
+  </ion-card>
+</ion-content>

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Informações
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item no-lines>
+    <div class="avatar-wrapper">
+      <ion-avatar>
+        <img src="https://scontent.fssa2-1.fna.fbcdn.net/v/t1.0-9/57423097_130671734669531_6563414613377941504_n.jpg?_nc_cat=110&_nc_oc=AQnlkv7lwrjLa5wc9SkB-JAg9olVFIdb8W-de92f_U0ACBgYFM0mk6KV0omzCEu4yT4&_nc_ht=scontent.fssa2-1.fna&oh=d49141487337e45960bb2a53dece61ab&oe=5D65B046" />
+      </ion-avatar>
+      <button class="btn-tirar-foto" ion-button icon-only round>
+        <ion-icon name="camera"></ion-icon>
+      </button>
+    </div>
+  </ion-item>
+    <ion-item> <p>Nome: {{ usuarioLogado.nomeCompleto }} </p></ion-item>
+    <ion-item> <p>Matricula: {{ usuarioLogado.matricula }} </p></ion-item><br />
+
+
+    <ion-list-header no-lines>  
+      <h2>Endereço </h2>
+      <ion-icon name="ios-home" item-right margin-left="25px"></ion-icon>
+      
+    </ion-list-header>
+    
+    <ion-item><p>Cep: {{ usuarioLogado.endereco.cep }}</p></ion-item>
+    <ion-item><p>Bairro:  {{ usuarioLogado.endereco.bairro }}</p></ion-item>
+    <ion-item><p>Logradouro: {{ usuarioLogado.endereco.logradouro }}</p></ion-item><br/>
+    <ion-list-header no-lines>
+        <h2>Estado</h2>
+    </ion-list-header>    
+    <ion-item><p>{{ usuarioLogado.endereco.uf.nome }}, {{ usuarioLogado.endereco.uf.sigla }}</p></ion-item>
+    <ion-item><p>{{ usuarioLogado.endereco.cidade }}</p></ion-item>
+
+</ion-content>

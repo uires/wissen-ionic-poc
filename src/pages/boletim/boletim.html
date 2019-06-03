@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Boletim</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let nota of notas">
+      <h2>{{ nota.disciplina.nome }}</h2>
+      <h3>{{ nota.docente.nomeCompleto }}</h3>
+      <ion-icon name="ios-arrow-dropright-circle" align-left  item-right (click)="selecionarNota(nota)"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
